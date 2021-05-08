@@ -35,9 +35,3 @@ jobs:
 
       - name: Make
         run: make
-
- 
-
-      - name: Execute rectangle executable
-        run: ./rectangle
-

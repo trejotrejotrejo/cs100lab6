@@ -36,9 +36,7 @@ jobs:
       - name: Make
         run: make
 
-      - name: Run all of the tests 
-        run: |
-          ./test
+ 
 
       - name: Execute rectangle executable
         run: ./rectangle

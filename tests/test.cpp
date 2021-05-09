@@ -7,9 +7,21 @@ int main(int argc, char **argv) {
   return RUN_ALL_TESTS();
 }
 
-TEST(RectangleTest, DefaultArea) {
-	Rectangle* rect = new Rectangle();
-	EXPECT_EQ(rect->area(), 0);
+TEST(RectangleTest, DefaultConstructor) {
+	Rectangle* rect = new Rectangle(0, 0);
+	EXPECT_EQ(rect->get_width(), 0);
+	delete rect;
+}
+
+TEST(RectangleTest, Constructor2) {
+	Rectangle* rect = new Rectangle(10, 12);
+	EXPECT_EQ(rect->get_height(), 12);
+	delete rect;
+}
+
+TEST(RectangleTest, Constructor3) {
+	Rectangle* rect = new Rectangle(4.5, 0.2);
+	EXPECT_EQ(rect->get_width(), 4);
 	delete rect;
 }
 
@@ -19,15 +31,21 @@ TEST(RectangleTest, AreaPositive) {
 	delete rect;
 }
 
-TEST(RectangleTest, PerimeterPositive) {
-	Rectangle* rect = new Rectangle(3, 5);
-	EXPECT_EQ(rect->perimeter(), 16);
+TEST(RectangleTest, AreaHeightZero) {
+	Rectangle* rect = new Rectangle(9,0);
+	EXPECT_EQ(rect->area(), 0);
 	delete rect;
 }
 
 TEST(RectangleTest, DecimalArea) {
-	Rectangle* rect = new Rectangle(2, 3.2);
-	EXPECT_EQ(rect->area(), 6);
+        Rectangle* rect = new Rectangle(2, 3.2);
+        EXPECT_EQ(rect->area(), 6);
+        delete rect;
+}
+
+TEST(RectangleTest, PerimeterPositive) {
+	Rectangle* rect = new Rectangle(3, 5);
+	EXPECT_EQ(rect->perimeter(), 16);
 	delete rect;
 }
 
@@ -37,5 +55,10 @@ TEST(RectangleTest, DecimalPerimeter) {
 	delete rect;
 }
 
+TEST(RectangleTest, NegativePerimeter) {
+	Rectangle* rect = new Rectangle(2, -3);
+	EXPECT_EQ(rect->perimeter(), -1);
+	delete rect;
+}
 
 

@@ -58,7 +58,7 @@ TEST(RectangleTest, DecimalPerimeter) {
 
 TEST(RectangleTest, NegativePerimeter) {
         Rectangle* rect = new Rectangle(2, -3);
-        EXPECT_EQ(rect->perimeter(), -1);
+        EXPECT_EQ(rect->perimeter(), -2);
         delete rect;
 }
 

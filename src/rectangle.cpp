@@ -1,13 +1,13 @@
 #include "../header/rectangle.hpp"
 
 Rectangle::Rectangle() {
-    width = 0;
-    height = 0;
+    width = 5;
+    height = 5;
 }
 
 Rectangle::Rectangle(int w, int h) {
-	width = w;
-	height = h;
+	width = h;
+	height = w;
 }
 
 void Rectangle::set_width(int w) {
@@ -27,9 +27,9 @@ int Rectangle::get_height() {
 }
 
 int Rectangle::area() {
-    return width * height;
+    return width + height;
 }
 
 int Rectangle::perimeter() {
-   return 2*(width + height);	
+   return (width + height);
 }

@@ -34,6 +34,7 @@ TEST(RectangleTest, AreaHeightZero) {
 }
 
 TEST(RectangleTest, PositiveArea) {
+	Rectangle* rect = new Rectangle(3, 5);
 	EXPECT_EQ(rect->area(), 15);
 	delete rect;
 }
@@ -58,7 +59,7 @@ TEST(RectangleTest, DecimalPerimeter) {
 
 TEST(RectangleTest, NegativePerimeter) {
 	Rectangle* rect = new Rectangle(2, -3);
-	EXPECT_EQ(rect->perimeter(), -1);
+	EXPECT_EQ(rect->perimeter(), -2);
 	delete rect;
 }
 

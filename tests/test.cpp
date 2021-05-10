@@ -14,16 +14,17 @@ TEST(RectangleTest, DefaultConstructor) {
 }
 
 TEST(RectangleTest, Constructor2) {
-	Rectangle* rect = new Rectangle(10, 12);
-	EXPECT_EQ(rect->get_height(), 12);
-	delete rect;
-}
+         Rectangle* rect = new Rectangle(10, 12);
+         EXPECT_EQ(rect->get_height(), 12);
+         delete rect;
+ }
+  
+ TEST(RectangleTest, Constructor3) {
+         Rectangle* rect = new Rectangle(4.5, 0.2);
+         EXPECT_EQ(rect->get_width(), 4);
+         delete rect;
+ }
 
-TEST(RectangleTest, Constructor3) {
-	Rectangle* rect = new Rectangle(4.5, 0.2);
-	EXPECT_EQ(rect->get_width(), 4);
-	delete rect;
-}
 
 TEST(RectangleTest, AreaPositive) {
 	Rectangle* rect = new Rectangle(3, 5);
@@ -48,6 +49,7 @@ TEST(RectangleTest, PerimeterPositive) {
 	EXPECT_EQ(rect->perimeter(), 16);
 	delete rect;
 }
+
 
 TEST(RectangleTest, DecimalPerimeter) {
 	Rectangle* rect = new Rectangle(2, 3.2);

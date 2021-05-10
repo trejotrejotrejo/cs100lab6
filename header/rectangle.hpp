@@ -15,6 +15,8 @@ class Rectangle {
         int get_height();
         int area();
         int perimeter();
+	int get_width();
+	int get_height();
 };
 
 #endif // RECTANGLE_HPP

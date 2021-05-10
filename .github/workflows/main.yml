@@ -26,18 +26,10 @@ jobs:
       - uses: actions/checkout@v2
         with:
            submodules: recursive
+ 
+ 
  - name: Build CMake
         run: cmake .
 
       - name: Make
         run: make
-
-<<<<<<< HEAD
-      - name: Run all of the tests 
-        run:  ./test
-=======
- 
->>>>>>> 2f948b05f3832a043ae21ee013a7032ff43c28e5
-
-      - name: Execute rectangle executable
-        run: ./rectangle

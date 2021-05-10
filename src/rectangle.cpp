@@ -21,7 +21,6 @@ void Rectangle::set_height(int h) {
 int Rectangle::get_width() {
       return width;
 }
- 
 
 int Rectangle::get_height() {
     return height;

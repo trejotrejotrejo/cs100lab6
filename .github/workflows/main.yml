@@ -27,8 +27,6 @@ jobs:
         with:
            submodules: recursive
 
-
-
 # Runs a set of commands using the runners shell
       - name: Build CMake
         run: cmake .
